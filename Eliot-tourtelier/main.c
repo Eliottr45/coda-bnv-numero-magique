@@ -10,6 +10,7 @@
 	srand(time(NULL));
 	int random_number = rand() % 100 + 1;
 	int guess;
+	printf("%d\n", random_number);
 	while(guess != random_number)
 	{
 		printf("Choisissez un nombre entre 1 et 100 : \n");
@@ -20,7 +21,7 @@
 			{
 				printf("C'est plus que %d !\n", guess);
 			}
-			else
+			else if (guess > random_number)
 			{
 				printf("C'est moins que %d !\n", guess);
 			}
